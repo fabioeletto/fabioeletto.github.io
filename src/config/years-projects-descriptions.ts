@@ -11,7 +11,7 @@ export const yearsProjectsDescriptions: YearProjectDescription[] = [
     title: "Portfolio Website v2",
     description: "Redesigned personal portfolio website",
     year: "2023",
-    githubUrl: "",
+    githubUrl: "https://github.com/fabioeletto/fabioeletto.github.io",
     techStack: ["Vue.js", "Tailwind CSS", "Vite", "TypeScript"],
   },
   {
