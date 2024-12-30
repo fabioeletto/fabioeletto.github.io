@@ -1,0 +1,8 @@
+<svg data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 208.63 208.76">
+    <defs>
+        <radialGradient id="a" data-name="Unbenannter Verlauf 11" cx="-1.04" cy="-1" fx="-1.04" fy="-1" r="212.66" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#17813e"/><stop offset="1" stop-color="#e4e4e4"/>
+        </radialGradient>
+    </defs>
+    <path d="M0 208V8.33C0 3.73 3.73 0 8.33 0H208c4.42 0-15.58 16-20 16H24.33A8.33 8.33 0 0 0 16 24.33V192c0 4.42-16 20.42-16 16Z" style="fill:url(#a);stroke-width:0" data-name="Ebene 1"/>
+</svg>
