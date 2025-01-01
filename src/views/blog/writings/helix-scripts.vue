@@ -17,7 +17,7 @@
     <p class="mb-4">
       A few friends and I teamed up to develop an automated solution for the
       checkout process of limited items, especially sneakers. Our team of four
-      shares a passion for learning new things and we saw the project as an
+      shares a passion for learning new things, and we saw the project as an
       opportunity to develop new skills while also making some extra money by
       reselling on the side.
     </p>
@@ -63,7 +63,7 @@
       developing the existing dashboard and integrate the payment provider
       Stripe. The dashboard gives users an overview of their license key and
       subscription, and they can also view change logs after updates. We also
-      implemented a rewards system to boost our presence on Twitter. When a user
+      implemented a reward system to boost our presence on Twitter. When a user
       successfully buys a product using our script and posts an image of the
       item on Twitter, they earn points. These points can be redeemed for
       various rewards, such as stickers, a free month of service, or a €5

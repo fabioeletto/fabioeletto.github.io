@@ -11,9 +11,8 @@
   </div>
   <div>
     <p class="sm:w-2/3 z-50 sm:text-base text-sm">
-      I am a full-stack web developer specializing in building exceptional
-      application from scratch. I love to solve problems and interested in
-      working on ambitious projects with positive people.
+      I am a proficient full-stack web developer who specializes in developing web applications from the ground up. 
+      Furthermore, I am passionate about solving problems and am interested in working on ambitious projects with positive people.
     </p>
   </div>
   <button
