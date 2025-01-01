@@ -12,7 +12,7 @@
     "preview": "yarn build && vite preview",
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "deploy": "yarn build && gh-pages -d dist --cname www.fabioeletto.dev"
+    "deploy": "yarn build && cd dist && cp index.html 404.html && cd .. && gh-pages -d dist --cname www.fabioeletto.dev"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
