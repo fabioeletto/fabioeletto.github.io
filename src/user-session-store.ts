@@ -1,10 +1,10 @@
 import { defineStore } from "pinia";
 import { ref } from "vue";
-import type { NavigationItemId } from "./types";
+import type { NavigationItemId, Theme } from "./types";
 
 interface UserSession {
   language: string;
-  theme: string;
+  theme: Theme;
   currentNavigationItemId: NavigationItemId;
 }
 
@@ -12,7 +12,7 @@ const LOCAL_USER_SESSION_STORAGE_KEY = "user-session-fabio-website";
 
 export const useUserSessionStore = defineStore("user-session", () => {
   const language = ref("en");
-  const theme = ref("dark");
+  const theme = ref<Theme>("dark");
   const currentNavigationItemId = ref<NavigationItemId>("home");
 
   loadUserSessionFromLocalStorage();
@@ -24,6 +24,16 @@ export const useUserSessionStore = defineStore("user-session", () => {
 
   const setCurrentNavigationItemId = (navigationItemId: NavigationItemId) => {
     currentNavigationItemId.value = navigationItemId;
+    saveUserSessionToLocalStorage();
+  };
+
+  const setTheme = (value: Theme) => {
+    theme.value = value;
+    saveUserSessionToLocalStorage();
+  };
+
+  const toggleTheme = () => {
+    theme.value = theme.value === "dark" ? "light" : "dark";
     saveUserSessionToLocalStorage();
   };
 
@@ -54,5 +64,7 @@ export const useUserSessionStore = defineStore("user-session", () => {
     currentNavigationItemId,
     setLanguage,
     setCurrentNavigationItemId,
+    setTheme,
+    toggleTheme,
   };
 });

@@ -1,30 +1,29 @@
 <template>
   <div
-    class="absolute xl:inset-x-[10%] xl:inset-y-[17%] inset-0 flex justify-center"
+    class="relative flex min-h-screen justify-center px-3 py-3 sm:px-6 sm:py-6 xl:items-center"
   >
-    <div class="max-w-[1440px] min-h-[500px] w-full">
-      <f-navigation
-        :navigation-items="navigationItems"
-        @navigation-item-change="$emit('navigation-item-change', $event)"
-        @toggle-theme="$emit('toggle-theme')"
-        class="xl:hidden flex"
-      />
-      <div
-        class="flex flex-col justify-center relative w-full h-full min-h-full"
-      >
+    <div class="hero-shell relative">
+      <div class="site-frame relative grid grid-rows-[auto_1fr_auto]">
         <f-top-left-corner-svg />
         <f-bottom-right-corner-svg />
-        <f-navigation
-          :navigation-items="navigationItems"
-          @navigation-item-change="$emit('navigation-item-change', $event)"
-          @toggle-theme="$emit('toggle-theme')"
-          class="xl:flex hidden"
-        />
-        <div class="xl:px-16 px-5">
-          <slot />
-        </div>
-
-        <f-footer class="flex justify-center" />
+        <header class="relative z-20 px-4 py-4 sm:px-8 xl:px-16">
+          <f-navigation
+            :navigation-items="navigationItems"
+            @navigation-item-change="$emit('navigation-item-change', $event)"
+            @toggle-theme="$emit('toggle-theme')"
+            class="flex"
+          />
+        </header>
+        <main
+          class="site-frame-content relative z-10 flex items-center px-6 py-8 sm:px-10 xl:px-16"
+        >
+          <div class="w-full">
+            <slot />
+          </div>
+        </main>
+        <footer class="relative z-20 px-6 py-4 sm:px-10 xl:px-16">
+          <f-footer class="flex" />
+        </footer>
       </div>
     </div>
   </div>
@@ -35,5 +34,10 @@ import type { NavigationItem } from "@/types";
 
 defineProps<{
   navigationItems: NavigationItem[];
+}>();
+
+defineEmits<{
+  (event: "navigation-item-change", navigationItem: NavigationItem): void;
+  (event: "toggle-theme"): void;
 }>();
 </script>

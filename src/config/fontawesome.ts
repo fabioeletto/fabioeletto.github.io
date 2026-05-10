@@ -34,7 +34,7 @@ library.add(
   faReadme,
   faBook,
   faChevronCircleLeft,
-  faChevronCircleRight
+  faChevronCircleRight,
 );
 
 export default {

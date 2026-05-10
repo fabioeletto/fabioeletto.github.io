@@ -2,6 +2,7 @@
   <f-section
     :navigation-items="navigationItems"
     @navigation-item-change="handleNavigationItemChange($event)"
+    @toggle-theme="userSessionStore.toggleTheme()"
   >
     <RouterView />
   </f-section>

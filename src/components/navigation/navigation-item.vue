@@ -1,11 +1,13 @@
 <template>
   <span
     :class="{
-        'hover:text-primary mx-4 flex justify-center items-center': true,
-        'text-primary': userSessionStore.currentNavigationItemId == navigationItem.id,
-        'text-light': userSessionStore.currentNavigationItemId != navigationItem.id
-      }"
-    >
+      'mx-1 flex items-center justify-center rounded-full px-3 py-2 text-sm font-medium transition': true,
+      'text-primary bg-white/10':
+        userSessionStore.currentNavigationItemId == navigationItem.id,
+      'text-base-color hover:text-primary':
+        userSessionStore.currentNavigationItemId != navigationItem.id,
+    }"
+  >
     <font-awesome-icon
       v-if="navigationItem.icon"
       :icon="navigationItem.icon"

@@ -1,32 +1,37 @@
 <template>
   <div
-    class="flex flex-col justify-center items-center min-h-screen sm:max-w-7xl w-full xl:mx-auto xl:p-20"
+    class="relative flex min-h-screen justify-center px-3 py-3 sm:px-6 sm:py-6 xl:items-center"
   >
-    <f-navigation
-      :navigation-items="navigationItems"
-      @navigation-item-change="router.back()"
-      @toggle-theme="$emit('toggle-theme')"
-      class="xl:hidden flex"
-    />
-    <div
-      class="flex flex-col justify-center relative sm:py-20 lg:px-16 w-full h-4/6 text-justify"
-    >
-      <f-top-left-corner-svg />
-      <f-bottom-right-corner-svg />
-      <f-navigation
-        :navigation-items="navigationItems"
-        @navigation-item-change="router.back()"
-        class="xl:flex hidden"
-      />
-      <span class="px-5 mt-20 sm:mt-0">
-        <RouterView />
-      </span>
-      <f-footer class="xl:flex hidden" />
+    <div class="hero-shell relative">
+      <div class="site-frame relative grid grid-rows-[auto_1fr_auto]">
+        <f-top-left-corner-svg />
+        <f-bottom-right-corner-svg />
+        <header class="relative z-20 px-4 py-4 sm:px-8 xl:px-16">
+          <f-navigation
+            :navigation-items="navigationItems"
+            @navigation-item-change="router.back()"
+            @toggle-theme="userSessionStore.toggleTheme()"
+            class="flex"
+          />
+        </header>
+        <main
+          class="site-frame-content relative z-10 px-6 py-8 sm:px-10 xl:px-16"
+        >
+          <span class="relative z-10 text-justify">
+            <RouterView />
+          </span>
+        </main>
+        <footer class="relative z-20 px-6 py-4 sm:px-10 xl:px-16">
+          <f-footer class="flex" />
+        </footer>
+      </div>
     </div>
-    <f-footer class="flex xl:hidden mb-4" />
   </div>
 </template>
 <script setup lang="ts">
 import router from "@/router";
 import { blogNavigationItems as navigationItems } from "@/config/navigation-items";
+import { useUserSessionStore } from "@/user-session-store";
+
+const userSessionStore = useUserSessionStore();
 </script>

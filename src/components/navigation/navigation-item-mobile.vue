@@ -1,20 +1,20 @@
 <template>
   <span
-    class="hover:border-primary bg-surface-secondary border border-surface py-1 px-1 inline-flex justify-center items-center h-16 w-full"
+    class="inline-flex h-12 w-full items-center justify-center rounded-xl border border-white/10 bg-transparent px-2 py-1"
   >
     <font-awesome-icon
       v-if="navigationItem.mobileIcon"
       :class="
         userSessionStore.currentNavigationItemId == navigationItem.id
           ? 'text-primary'
-          : 'text-light'
+          : 'text-base-color'
       "
       :icon="navigationItem.mobileIcon"
-      size="lg"
-      class="mr-2"
+      size="sm"
+      class="mr-1"
     />
-    <span class="text-white">
-      {{ navigationItem.mobileLabel }}
+    <span class="text-xs">
+      {{ navigationItem.mobileLabel || navigationItem.label }}
     </span>
   </span>
 </template>
