@@ -1,4 +1,6 @@
 import type { YearProjectDescription } from "@/types";
+import cheflinkImage from "@/assets/projects/cheflink.webp";
+import supplyChainImage from "@/assets/projects/supplychain.webp";
 
 export const yearsProjectsDescriptions: YearProjectDescription[] = [
   {
@@ -7,21 +9,29 @@ export const yearsProjectsDescriptions: YearProjectDescription[] = [
       "Founded and shipped a commercial limited-release automation product, including a Chrome extension and Node.js licensing/auth backend for 1,000+ monthly paying users.",
     year: "2021",
     blogUrl: "blogs/helix-scripts",
-    techStack: ["JavaScript", "Node.js", "Chrome Extension", "MySQL"],
+    techStack: ["Vue.js", "TypeScript", "Node.js", "Docker", "MySQL"],
   },
   {
     title: "Self Ordering System",
     description:
       "Delivered a restaurant and bar ordering platform to a paying customer, with digital menu management, full order lifecycle processing, and RBAC for staff/admin roles.",
     year: "2023",
-    techStack: ["Vue.js", "TypeScript", "Go", "PostgreSQL"],
+    techStack: ["Vue.js", "TypeScript", "Go", "Docker", "PostgreSQL"],
+    image: {
+      src: cheflinkImage,
+      alt: "Cheflink self ordering system interface",
+    },
   },
   {
     title: "Supply Chain Tracking",
     description:
       "Built a blockchain supply chain prototype with Ethereum smart contracts for immutable event traceability and a Node.js REST API for client-friendly integration.",
     year: "2022",
-    techStack: ["Vue.js", "Nest.js", "TypeScript", "Solidity", "MongoDB"],
+    techStack: ["Vue.js", "TypeScript", "Nest.js", "Solidity", "MongoDB"],
+    image: {
+      src: supplyChainImage,
+      alt: "Supply chain tracking dashboard",
+    },
   },
   {
     title: "NFT Smart Contract",
@@ -36,7 +46,7 @@ export const yearsProjectsDescriptions: YearProjectDescription[] = [
     description:
       "Built a hackathon prototype to improve communication between farmers and workers using AI-assisted workflows and a full-stack TypeScript architecture.",
     year: "2024",
-    techStack: ["Vue.js", "Nest.js", "TypeScript", "OpenAI API"],
+    techStack: ["Vue.js", "TypeScript", "Nest.js", "OpenAI API"],
   },
   {
     title: "Local Clipboard",

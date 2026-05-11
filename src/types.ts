@@ -15,4 +15,8 @@ export type YearProjectDescription = {
   blogUrl?: string;
   techStack?: string[];
   githubUrl?: string;
+  image?: {
+    src: string;
+    alt: string;
+  };
 };

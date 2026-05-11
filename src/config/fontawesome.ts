@@ -16,6 +16,7 @@ import {
   faArrowLeft,
   faAnglesRight,
   faBook,
+  faImage,
   faChevronCircleLeft,
   faChevronCircleRight,
 } from "@fortawesome/free-solid-svg-icons";
@@ -33,6 +34,7 @@ library.add(
   faAnglesRight,
   faReadme,
   faBook,
+  faImage,
   faChevronCircleLeft,
   faChevronCircleRight,
 );
