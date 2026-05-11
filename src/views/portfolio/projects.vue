@@ -5,6 +5,10 @@
     >
       Projects
     </p>
+    <p class="text-muted mb-4 text-xs sm:text-sm">
+      Use the buttons in the top-right corner of each card to open the blog,
+      GitHub, or image.
+    </p>
     <div class="w-full h-full lg:flex-row">
       <div class="w-full">
         <project-card
