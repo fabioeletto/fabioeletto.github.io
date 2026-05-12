@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative flex min-h-screen justify-center px-3 py-3 sm:px-6 sm:py-6 xl:items-center"
+    class="relative flex min-h-screen min-h-[100dvh] justify-center px-3 py-3 sm:px-6 sm:py-6 xl:items-center"
   >
     <div class="hero-shell relative">
       <div class="site-frame relative grid grid-rows-[auto_1fr_auto]">

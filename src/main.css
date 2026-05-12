@@ -49,9 +49,14 @@ body,
   color: hsl(var(--color-text));
 }
 
+html {
+  background-color: hsl(var(--color-surface));
+}
+
 body {
   position: relative;
   overflow-x: hidden;
+  background-color: hsl(var(--color-surface));
   background: var(--hero-overlay);
 }
 
@@ -72,8 +77,15 @@ body::after {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(circle at 40% 45%, transparent 44%, rgb(0 0 0 / 0.34) 100%);
   z-index: -1;
+}
+
+:root[data-theme="dark"] body::after {
+  background: radial-gradient(circle at 40% 45%, transparent 44%, rgb(0 0 0 / 0.34) 100%);
+}
+
+:root[data-theme="light"] body::after {
+  background: radial-gradient(circle at 40% 45%, transparent 44%, rgb(15 23 42 / 0.12) 100%);
 }
 
 .company-name,

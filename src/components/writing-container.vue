@@ -14,7 +14,7 @@
         </span>
       </div>
       <span
-        class="sm:text-4xl text-2xl text-left mb-4 font-bold duration-500 text-white"
+        class="sm:text-4xl text-2xl text-left mb-4 font-bold duration-500 text-base-color"
       >
         {{ title }}
       </span>
